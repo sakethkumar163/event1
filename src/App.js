@@ -1,6 +1,7 @@
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Login from './components/Login'; 
+import Footer from './components/Footer'; 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
@@ -18,6 +19,7 @@ function App() {
           <Route  path="/login" element={<Login/>}/>
         </Routes>
     </Router>
+    <Footer/>
 	</>
 }
 
