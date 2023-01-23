@@ -4,23 +4,20 @@ import Login from './components/Login';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
-  Router,
-  Switch,
-  Route,
-  Link
+  BrowserRouter as Router,
+  Routes,
+  Route
 } from "react-router-dom";
 // import { Route, Routes } from 'react-router-dom';
 function App() {
 	return <>
   <Navbar/>
-  <Router>
-          <Route exact path="/Home">
-            <Home />
-          </Route>
-          <Route exact path="/Login">
-            <Login />
-          </Route>
-  </Router>
+ <Router>
+        <Routes>
+          <Route  path="/" element={<Home/>}/>
+          <Route  path="/login" element={<Login/>}/>
+        </Routes>
+    </Router>
 	</>
 }
 
