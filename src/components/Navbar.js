@@ -1,12 +1,16 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
+import logo from './default_dp.jpg';
 const header = () => {
   return (
     <div>
         <section className="row1">
           <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to="/">Navbar</NavLink>
+            <Link class="navbar-brand" to="#">
+                <img src={logo} alt="Avatar Logo" style={{width:'40px'}} class="rounded-pill"/> 
+              </Link>
+              <NavLink className="navbar-brand" to="/">Eventia</NavLink>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
               </button>
@@ -19,13 +23,13 @@ const header = () => {
                     <NavLink className="nav-link" to="/events">Events</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/schedule_event">Shedule Event</NavLink>
+                    <NavLink className="nav-link" to="/schedule">Shedule Event</NavLink>
                   </li>
                   <li className="nav-item ">
                     <NavLink className="nav-link " to="/approvals">approvals</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/report">Report</NavLink>
+                    <NavLink className="nav-link" to="/reports">Report</NavLink>
                   </li>
                   <li className="nav-item ">
                     <NavLink className="nav-link" to="/login">Login</NavLink>
